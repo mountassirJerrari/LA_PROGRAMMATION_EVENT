@@ -16,7 +16,7 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private string expression;
         private string insertedNumber;
-        private float result;
+        private float result=0;
         private Button lastOpration=null ;
         public Form1()
         {
@@ -40,6 +40,7 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private void BtnDiv_Click(object sender, EventArgs e)
         {
             btnClicked(BtnDiv);
+            operationClicked(BtnDiv);
         }
 
         private void BtnZero_Click(object sender, EventArgs e)
@@ -163,15 +164,24 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
             }
             else if (operation.Text == "*")
             {
+                if (result==0)
+                {
+                    result = 1;
+                }
                 
-                result = result*float.Parse(insertedNumber);
+                result = (result)*(float.Parse(insertedNumber));
             }
-            else
+            else if (operation.Text == "/")
             {
-                result /= float.Parse(insertedNumber);
+                if (result == 0)
+                {
+                    result = 1;
+                }
+                result /=float.Parse(insertedNumber);
             }
-            
-            if(!isEgaleOperation)
+            insertedNumber = "0";
+
+            if (!isEgaleOperation)
             lastOpration = operation;
             
             
