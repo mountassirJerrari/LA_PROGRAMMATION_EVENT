@@ -16,7 +16,8 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private string expression;
         private string insertedNumber;
-        private int result;
+        private float result;
+        private Button lastOpration=null ;
         public Form1()
         {
             InitializeComponent();
@@ -48,7 +49,16 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private void BtnEgale_Click(object sender, EventArgs e)
         {
-            
+            if (lastOpration != null)
+            {
+                operationClicked(lastOpration, true);
+                Lblresult.Text = Convert.ToString(result);
+            }
+            else
+            {
+                Lblresult.Text=insertedNumber;
+            }
+
         }
 
         private void BtnPnt_Click(object sender, EventArgs e)
@@ -59,16 +69,21 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private void BtnPlus_Click(object sender, EventArgs e)
         {
             btnClicked(BtnPlus);
+            operationClicked(BtnPlus);
+
         }
 
         private void BtnMoin_Click(object sender, EventArgs e)
         {
             btnClicked(BtnMoin);
+            operationClicked(BtnMoin);
         }
 
         private void BtnMltply_Click(object sender, EventArgs e)
         {
             btnClicked(BtnMltply);
+            operationClicked(BtnMltply);
+
         }
 
         private void Btn1_Click(object sender, EventArgs e)
@@ -83,32 +98,32 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn4);
         }
 
         private void Btn5_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn5);
         }
 
         private void Btn6_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn6);
         }
 
         private void Btn9_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn9);
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn7);
         }
 
         private void Btn8_Click(object sender, EventArgs e)
         {
-
+            btnClicked(Btn8);
         }
 
         private void LblExpression_Click(object sender, EventArgs e)
@@ -123,30 +138,45 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private void btnClicked(Button btn)
         {
             expression += btn.Text;
-            insertedNumber += btn.Text;
+            if (btn.Text!="+" && btn.Text != "-" && btn.Text != "/" && btn.Text != "*"  )
+            {
+                insertedNumber += btn.Text;
+            }
+            
             LblExpression.Text = expression;
            
 
         }
-        private void operationClicked( Button operation)
+        private void  operationClicked( Button operation , bool isEgaleOperation = false)
         {
+
             
             if (operation.Text == "+")
             {
-                result*=int.Parse(insertedNumber);
+                result+=float.Parse(insertedNumber);
+                
             }
             else if (operation.Text == "-")
             {
-                result *= int.Parse(insertedNumber);
+                result -= float.Parse(insertedNumber);
+
             }
             else if (operation.Text == "*")
             {
-                result *= int.Parse(insertedNumber);
+                
+                result = result*float.Parse(insertedNumber);
             }
             else
             {
-                result *= int.Parse(insertedNumber);
+                result /= float.Parse(insertedNumber);
             }
+            
+            if(!isEgaleOperation)
+            lastOpration = operation;
+            
+            
+
+
         }
 
 
