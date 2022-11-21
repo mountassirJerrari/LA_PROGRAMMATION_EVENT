@@ -39,8 +39,7 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private void BtnDiv_Click(object sender, EventArgs e)
         {
-            btnClicked(BtnDiv);
-            operationClicked(BtnDiv);
+            divLbl.Text = "la devision ne fonctionne pas ";
         }
 
         private void BtnZero_Click(object sender, EventArgs e)
@@ -189,6 +188,9 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
