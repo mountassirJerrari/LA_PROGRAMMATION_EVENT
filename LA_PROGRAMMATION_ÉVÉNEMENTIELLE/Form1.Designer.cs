@@ -47,11 +47,13 @@
             this.BtnPnt = new System.Windows.Forms.Button();
             this.BtnZero = new System.Windows.Forms.Button();
             this.divLbl = new System.Windows.Forms.Label();
+            this.btnCE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnEgale
             // 
-            this.BtnEgale.Location = new System.Drawing.Point(441, 366);
+            this.BtnEgale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEgale.Location = new System.Drawing.Point(329, 307);
             this.BtnEgale.Name = "BtnEgale";
             this.BtnEgale.Size = new System.Drawing.Size(75, 54);
             this.BtnEgale.TabIndex = 0;
@@ -61,7 +63,8 @@
             // 
             // Btn2
             // 
-            this.Btn2.Location = new System.Drawing.Point(279, 296);
+            this.Btn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn2.Location = new System.Drawing.Point(167, 237);
             this.Btn2.Name = "Btn2";
             this.Btn2.Size = new System.Drawing.Size(75, 62);
             this.Btn2.TabIndex = 1;
@@ -71,7 +74,8 @@
             // 
             // BtnPlus
             // 
-            this.BtnPlus.Location = new System.Drawing.Point(441, 296);
+            this.BtnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPlus.Location = new System.Drawing.Point(329, 237);
             this.BtnPlus.Name = "BtnPlus";
             this.BtnPlus.Size = new System.Drawing.Size(75, 62);
             this.BtnPlus.TabIndex = 2;
@@ -81,7 +85,8 @@
             // 
             // Btn3
             // 
-            this.Btn3.Location = new System.Drawing.Point(360, 296);
+            this.Btn3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn3.Location = new System.Drawing.Point(248, 237);
             this.Btn3.Name = "Btn3";
             this.Btn3.Size = new System.Drawing.Size(75, 62);
             this.Btn3.TabIndex = 3;
@@ -92,9 +97,9 @@
             // Lblresult
             // 
             this.Lblresult.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lblresult.Location = new System.Drawing.Point(211, 121);
+            this.Lblresult.Location = new System.Drawing.Point(89, 62);
             this.Lblresult.Name = "Lblresult";
-            this.Lblresult.Size = new System.Drawing.Size(224, 13);
+            this.Lblresult.Size = new System.Drawing.Size(234, 13);
             this.Lblresult.TabIndex = 4;
             this.Lblresult.Text = "___";
             this.Lblresult.Click += new System.EventHandler(this.Lblresult_Click);
@@ -102,16 +107,17 @@
             // LblExpression
             // 
             this.LblExpression.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LblExpression.Location = new System.Drawing.Point(211, 151);
+            this.LblExpression.Location = new System.Drawing.Point(86, 102);
             this.LblExpression.Name = "LblExpression";
-            this.LblExpression.Size = new System.Drawing.Size(224, 13);
+            this.LblExpression.Size = new System.Drawing.Size(237, 13);
             this.LblExpression.TabIndex = 5;
             this.LblExpression.Text = "___";
             this.LblExpression.Click += new System.EventHandler(this.LblExpression_Click);
             // 
             // BtnMoin
             // 
-            this.BtnMoin.Location = new System.Drawing.Point(441, 238);
+            this.BtnMoin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMoin.Location = new System.Drawing.Point(329, 179);
             this.BtnMoin.Name = "BtnMoin";
             this.BtnMoin.Size = new System.Drawing.Size(75, 52);
             this.BtnMoin.TabIndex = 6;
@@ -121,7 +127,8 @@
             // 
             // BtnMltply
             // 
-            this.BtnMltply.Location = new System.Drawing.Point(441, 180);
+            this.BtnMltply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMltply.Location = new System.Drawing.Point(329, 121);
             this.BtnMltply.Name = "BtnMltply";
             this.BtnMltply.Size = new System.Drawing.Size(75, 52);
             this.BtnMltply.TabIndex = 7;
@@ -131,7 +138,8 @@
             // 
             // BtnDiv
             // 
-            this.BtnDiv.Location = new System.Drawing.Point(441, 121);
+            this.BtnDiv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDiv.Location = new System.Drawing.Point(329, 62);
             this.BtnDiv.Name = "BtnDiv";
             this.BtnDiv.Size = new System.Drawing.Size(75, 53);
             this.BtnDiv.TabIndex = 8;
@@ -141,7 +149,8 @@
             // 
             // Btn1
             // 
-            this.Btn1.Location = new System.Drawing.Point(198, 296);
+            this.Btn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn1.Location = new System.Drawing.Point(86, 237);
             this.Btn1.Name = "Btn1";
             this.Btn1.Size = new System.Drawing.Size(75, 62);
             this.Btn1.TabIndex = 9;
@@ -151,7 +160,8 @@
             // 
             // Btn4
             // 
-            this.Btn4.Location = new System.Drawing.Point(198, 238);
+            this.Btn4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn4.Location = new System.Drawing.Point(86, 179);
             this.Btn4.Name = "Btn4";
             this.Btn4.Size = new System.Drawing.Size(75, 52);
             this.Btn4.TabIndex = 10;
@@ -161,7 +171,8 @@
             // 
             // Btn5
             // 
-            this.Btn5.Location = new System.Drawing.Point(279, 238);
+            this.Btn5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn5.Location = new System.Drawing.Point(167, 179);
             this.Btn5.Name = "Btn5";
             this.Btn5.Size = new System.Drawing.Size(75, 52);
             this.Btn5.TabIndex = 11;
@@ -171,7 +182,8 @@
             // 
             // Btn6
             // 
-            this.Btn6.Location = new System.Drawing.Point(360, 238);
+            this.Btn6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn6.Location = new System.Drawing.Point(248, 179);
             this.Btn6.Name = "Btn6";
             this.Btn6.Size = new System.Drawing.Size(75, 52);
             this.Btn6.TabIndex = 12;
@@ -181,7 +193,8 @@
             // 
             // Btn7
             // 
-            this.Btn7.Location = new System.Drawing.Point(198, 180);
+            this.Btn7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn7.Location = new System.Drawing.Point(86, 121);
             this.Btn7.Name = "Btn7";
             this.Btn7.Size = new System.Drawing.Size(75, 52);
             this.Btn7.TabIndex = 13;
@@ -191,7 +204,8 @@
             // 
             // Btn8
             // 
-            this.Btn8.Location = new System.Drawing.Point(279, 180);
+            this.Btn8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn8.Location = new System.Drawing.Point(167, 121);
             this.Btn8.Name = "Btn8";
             this.Btn8.Size = new System.Drawing.Size(75, 52);
             this.Btn8.TabIndex = 14;
@@ -201,7 +215,8 @@
             // 
             // Btn9
             // 
-            this.Btn9.Location = new System.Drawing.Point(360, 180);
+            this.Btn9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn9.Location = new System.Drawing.Point(248, 121);
             this.Btn9.Name = "Btn9";
             this.Btn9.Size = new System.Drawing.Size(75, 52);
             this.Btn9.TabIndex = 15;
@@ -211,7 +226,8 @@
             // 
             // BtnPnt
             // 
-            this.BtnPnt.Location = new System.Drawing.Point(360, 364);
+            this.BtnPnt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPnt.Location = new System.Drawing.Point(248, 305);
             this.BtnPnt.Name = "BtnPnt";
             this.BtnPnt.Size = new System.Drawing.Size(75, 56);
             this.BtnPnt.TabIndex = 19;
@@ -221,7 +237,8 @@
             // 
             // BtnZero
             // 
-            this.BtnZero.Location = new System.Drawing.Point(279, 364);
+            this.BtnZero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnZero.Location = new System.Drawing.Point(167, 305);
             this.BtnZero.Name = "BtnZero";
             this.BtnZero.Size = new System.Drawing.Size(75, 56);
             this.BtnZero.TabIndex = 20;
@@ -233,18 +250,30 @@
             // 
             this.divLbl.AutoSize = true;
             this.divLbl.ForeColor = System.Drawing.Color.Crimson;
-            this.divLbl.Location = new System.Drawing.Point(522, 141);
+            this.divLbl.Location = new System.Drawing.Point(89, 36);
             this.divLbl.Name = "divLbl";
             this.divLbl.Size = new System.Drawing.Size(0, 13);
             this.divLbl.TabIndex = 21;
             this.divLbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnCE
+            // 
+            this.btnCE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCE.Location = new System.Drawing.Point(86, 305);
+            this.btnCE.Name = "btnCE";
+            this.btnCE.Size = new System.Drawing.Size(75, 56);
+            this.btnCE.TabIndex = 23;
+            this.btnCE.Text = "CE";
+            this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(523, 423);
+            this.Controls.Add(this.btnCE);
             this.Controls.Add(this.divLbl);
             this.Controls.Add(this.BtnZero);
             this.Controls.Add(this.BtnPnt);
@@ -265,9 +294,11 @@
             this.Controls.Add(this.Btn2);
             this.Controls.Add(this.BtnEgale);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +325,7 @@
         private System.Windows.Forms.Button BtnPnt;
         private System.Windows.Forms.Button BtnZero;
         private System.Windows.Forms.Label divLbl;
+        private System.Windows.Forms.Button btnCE;
     }
 }
 

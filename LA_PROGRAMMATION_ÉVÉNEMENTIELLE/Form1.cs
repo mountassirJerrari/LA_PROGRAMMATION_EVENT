@@ -18,16 +18,34 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private string insertedNumber;
         private float result=0;
         private Button lastOpration=null ;
+        private bool first_operation= true ;
+        private List<Button> buttons = new List<Button>();
+
         public Form1()
         {
             InitializeComponent();
+            buttons.Add(btnCE);
+            buttons.Add(Btn1);
+            buttons.Add(Btn2);
+            buttons.Add(Btn3);  
+            buttons.Add(Btn4);
+            buttons.Add(Btn5);
+            buttons.Add(Btn6);
+            buttons.Add(Btn7);
+            buttons.Add(Btn8);
+            buttons.Add(Btn9);
+            buttons.Add(BtnDiv);
+            buttons.Add(BtnMltply);
+            buttons.Add(BtnMoin);
+            buttons.Add(BtnPlus);
+            buttons.Add(BtnEgale);
+
         }
 
 
         private void Btn2_Click(object sender, EventArgs e)
         {
             btnClicked(Btn2);
-
         }
 
         
@@ -39,7 +57,9 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
 
         private void BtnDiv_Click(object sender, EventArgs e)
         {
-            divLbl.Text = "la devision ne fonctionne pas ";
+           
+            btnClicked(BtnDiv);
+            operationClicked(BtnDiv);
         }
 
         private void BtnZero_Click(object sender, EventArgs e)
@@ -150,35 +170,69 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private void  operationClicked( Button operation , bool isEgaleOperation = false)
         {
 
-            
-            if (operation.Text == "+")
+            divLbl.Text = "";
+            if (operation.Text == "+" && insertedNumber!=null)
             {
-                result+=float.Parse(insertedNumber);
+                if (first_operation)
+                {
+                    result = float.Parse(insertedNumber);
+                    first_operation = false;
+                }
+                else
+                {
+                    result += float.Parse(insertedNumber);
+                }
+               
                 
             }
-            else if (operation.Text == "-")
+            else if (operation.Text == "-" && insertedNumber != null)
             {
-                result -= float.Parse(insertedNumber);
+                if (first_operation)
+                {
+                    result = float.Parse(insertedNumber);
+                    first_operation = false;
+                }
+                else
+                {
+                    result -= float.Parse(insertedNumber);
+                }
 
             }
-            else if (operation.Text == "*")
+            else if (operation.Text == "*" && insertedNumber!=null)
             {
-                if (result==0)
+                if (first_operation)
                 {
-                    result = 1;
+                    result = float.Parse(insertedNumber);
+                    first_operation = false;
+                }
+                else
+                {
+                    result *= float.Parse(insertedNumber);
+                }
+
+                
+            }
+            else if (operation.Text == "/" && insertedNumber != null)
+            {
+                if (float.Parse(insertedNumber ) == 0)
+                {
+                    divLbl.Text = " on peut pas devisé sur ZERO";
+                }else
+                {
+                    if (first_operation)
+                    {
+                        result = float.Parse(insertedNumber);
+                        first_operation = false;
+                    }
+                    else
+                    {
+                        result /= float.Parse(insertedNumber);
+                    }
+
                 }
                 
-                result = (result)*(float.Parse(insertedNumber));
             }
-            else if (operation.Text == "/")
-            {
-                if (result == 0)
-                {
-                    result = 1;
-                }
-                result /=float.Parse(insertedNumber);
-            }
-            insertedNumber = "0";
+            insertedNumber = null;
 
             if (!isEgaleOperation)
             lastOpration = operation;
@@ -191,6 +245,35 @@ namespace LA_PROGRAMMATION_ÉVÉNEMENTIELLE
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+          expression=null;
+         insertedNumber=null;
+         result = 0;
+         lastOpration = null;
+         LblExpression.Text = String.Empty;
+         Lblresult.Text = String.Empty;
+    }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            foreach (Button button in buttons)
+            {
+                if (char.ToString(e.KeyChar) == button.Text)
+                {
+                    button.PerformClick();
+                }
+                
+            }
+            if (char.ToString(e.KeyChar) == "c" )
+            {
+                btnCE.PerformClick();
+            }
+
+
+            
         }
     }
 }
